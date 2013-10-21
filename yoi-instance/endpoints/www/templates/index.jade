@@ -1,0 +1,9 @@
+extends /bases/layout
+
+block section
+  if session
+    p Your session is "#{session}"
+    a(href="/logout") Logout
+  else
+    p Without session
+    a(href="/login") Login

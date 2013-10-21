@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 16px;
+    font-family: Courier;
+}
+
+header {
+    background: #333;
+    color: #fff;
+}
+
+header, section, footer {
+    margin: 0;
+    padding: 1em;
+}
+
+h1, h3 {
+    display: inline;
+}

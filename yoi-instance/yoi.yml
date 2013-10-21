@@ -1,0 +1,84 @@
+# ------------------------------------------------------------------------------
+# Environment
+# ------------------------------------------------------------------------------
+environment: development
+
+# ------------------------------------------------------------------------------
+# Endpoints
+# ------------------------------------------------------------------------------
+endpoints:
+    api:
+        - example
+    www:
+        - example
+
+# ------------------------------------------------------------------------------
+# Assets
+# ------------------------------------------------------------------------------
+assets:
+    - folder : js
+      maxage: 3600
+    - folder: css
+      maxage: 3600
+    - folder: img
+      maxage: 86400
+    - file:   humans.txt
+      maxage: 86400
+    - file:   robots.txt
+
+# ------------------------------------------------------------------------------
+# Templates
+# ------------------------------------------------------------------------------
+templates: endpoints/www/templates
+
+# ------------------------------------------------------------------------------
+# Session Variables
+# ------------------------------------------------------------------------------
+session:
+    # HTTP Request Header
+    rest:   yoi-session
+    # Cookie Request
+    cookie: yoi-session
+    domain: ""
+    expire: 86400
+
+# ------------------------------------------------------------------------------
+# CRON Jobs
+# ------------------------------------------------------------------------------
+#crons:
+#   - name    : Example of 5 seconds job
+#      schedule: "*/5 * * * * *"
+#      file    : example
+#      timezone: Europe/Madrid
+
+# ------------------------------------------------------------------------------
+# CORS Properties
+# ------------------------------------------------------------------------------
+ALLOW_ORIGIN: "*"
+
+ALLOWED_HEADERS:
+    - Accept
+    - Accept-Version
+    - Content-Length
+    - Content-MD5
+    - Content-Type
+    - Date
+    - Api-Version
+    - Response-Time
+    - Authorization
+
+EXPOSE_HEADERS:
+    - api-version
+    - content-length
+    - content-md5
+    - content-type
+    - date
+    - request-id
+    - response-time
+
+ALLOWED_METHODS:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+    - OPTIONS
